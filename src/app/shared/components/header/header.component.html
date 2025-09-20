@@ -1,0 +1,97 @@
+<header id="main-header" class="top-fixed">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between py-3">
+      <!--
+      <a href="" class="hometop-btn">
+        <strong>Soccer API</strong>
+      </a>
+      -->
+      <div class="home-logo">
+        <a href="/">
+          <div class="d-flex">
+            <img src="assets/images/logo_white.png" width="50" />
+            <div class="mt-auto mb-auto">
+
+                <span class="hometop-btn"><strong>Soccer API</strong></span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Hamburger Icon (visible on <1200px) -->
+      <button
+        class="d-xl-none border-0 bg-transparent"
+        (click)="toggleMenu()"
+        aria-label="Toggle menu"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      
+
+      <!-- Desktop Menu -->
+      <nav class="d-none d-xl-flex align-items-center gap-3">
+        <a href="https://github.com/JohnComonitski/SoccerAPI" mat-button class="hometop-btn" scrollTo="intro-one-section">
+          <strong>Git</strong>
+        </a>
+        <a href="https://johncomonitski.com/soccerapi/docs/" mat-button class="hometop-btn" scrollTo="intro-one-section">
+          <strong>Docs</strong>
+        </a>
+        <button mat-button class="hometop-btn" scrollTo="feature-section">
+          <strong>Features</strong>
+        </button>
+        <button mat-button class="hometop-btn" scrollTo="service-section">
+          <strong>Examples</strong>
+        </button>
+        <button mat-button class="hometop-btn" scrollTo="portfolio-section">
+          <strong>Built With Soccer API</strong>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu d-xl-none" [class.open]="isMenuOpen">
+      <a
+        mat-button
+        class="hometop-btn"
+        scrollTo="intro-one-section"
+        (click)="closeMenu()"
+        href="https://github.com/JohnComonitski/SoccerAPI"
+      >
+        Git
+      </a>
+      <a
+        mat-button
+        class="hometop-btn"
+        scrollTo="feature-section"
+        (click)="closeMenu()"
+        href="https://johncomonitski.com/soccerapi/docs/"
+      >
+        Docs
+      </a>
+      <button
+        mat-button
+        class="hometop-btn"
+        scrollTo="feature-section"
+        (click)="closeMenu()"
+      >
+        Features
+      </button>
+      <button
+        mat-button
+        class="hometop-btn"
+        scrollTo="service-section"
+        (click)="closeMenu()"
+      >
+        Examples
+      </button>
+      <button
+        mat-button
+        class="hometop-btn"
+        scrollTo="portfolio-section"
+        (click)="closeMenu()"
+      >
+        Built With Soccer API
+      </button>
+    </div>
+  </div>
+</header>

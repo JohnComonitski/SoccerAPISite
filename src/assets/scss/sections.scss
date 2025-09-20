@@ -1,0 +1,165 @@
+.home-intro-title {
+  font-weight: 900;
+  margin: 0 0 24px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.22);
+  @media (min-width: 991px) {
+    font-size: 60px;
+    line-height: 75px;
+  }
+  @media (max-width: 992px) {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+.home-intro-desc {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0 0 40px;
+}
+.home-intro-section {
+  padding: 12rem 0;
+  @media (max-width: 1200px) {
+    padding-top: 8rem;
+    padding-bottom: 7rem;
+  }
+}
+.title-page {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+.feature-item {
+  padding: 0 2rem;
+}
+.featured-section i {
+  font-size: 4rem;
+}
+.img-cap {
+  position: relative;
+}
+
+//Sections
+.services-wrappper {
+  .service-card {
+    text-align: center;
+    padding: 2rem;
+    .icon-cap {
+      display: inline-block;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      i {
+        font-size: 3rem;
+      }
+    }
+  }
+  mat-card {
+    margin: 1rem;
+    background-color: var(--ang-white-bg);
+  }
+}
+@media (max-width: 767px) {
+  .services-wrappper .service-card {
+    padding: 1rem;
+  }
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.carousel-left,
+.carousel-right {
+  background: #fff;
+  border: 0;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  font-size: 2rem;
+  position: absolute;
+  z-index: 99;
+  top: 40%;
+  cursor: pointer;
+}
+
+.carousel-left {
+  left: 10px;
+}
+.carousel-right {
+  right: 10px;
+}
+
+.ngucarousel {
+  @media (min-width: 992px) {
+    padding: 0 30px;
+  }
+  @media (max-width: 992px) {
+    padding: 0 15px;
+  }
+}
+
+.rounded-circle {
+  border-radius: 100%;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.w-100 {
+  width: 100% !important;
+}
+
+.feature-count {
+  display: block;
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 2.4rem;
+}
+
+//slider
+.tile {
+  box-shadow: none !important;
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+//Slider
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 8px;
+}
+.portfolio-section {
+  .carousel-item {
+    min-width: calc(100% / 3);
+    padding: 15px;
+  }
+  @media (max-width: 992px) {
+    .carousel-item {
+      min-width: 100%;
+    }
+  }
+}
+
+.testimonials-section {
+  .carousel-item {
+    min-width: 100%;
+    padding: 30px;
+  }
+}

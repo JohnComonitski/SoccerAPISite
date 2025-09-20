@@ -1,0 +1,46 @@
+<section id="portfolio-section" class="portfolio-section py-50 py-md-80">
+  <div class="container">
+    <div class="text-center mb-50">
+      <h2 class="title-page">Our Recent Work</h2>
+      <p class="lead w-60 mx-auto">
+        Consectetur adipisicing elit. Velit id error rem qui. Neque aperiam
+        saepe placeat vero reprehenderit.
+      </p>
+    </div>
+
+    <div class="carousel-wrapper position-relative">
+      <div #track class="carousel-track d-flex transition">
+        <div class="carousel-item" *ngFor="let p of portfolios">
+          <mat-card class="p-0">
+            <img mat-card-image [src]="p.photo" alt="Portfolio Image" />
+            <mat-card-content>
+              <h5 class="mt-25">
+                <strong
+                  ><a href="#">{{ p.title }}</a></strong
+                >
+              </h5>
+              <p>{{ p.text }}</p>
+              <mat-divider class="mb-10"></mat-divider>
+              <div>
+                <button mat-icon-button>
+                  <mat-icon class="text-muted">favorite</mat-icon>
+                </button>
+                <span class="flex-grow-1"></span>
+                <button mat-icon-button>
+                  <mat-icon class="text-muted">share</mat-icon>
+                </button>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+      <button class="carousel-nav prev carousel-left" (click)="prevSlide()">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <button class="carousel-nav next carousel-right" (click)="nextSlide()">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+<section id="portfolio-section" class="portfolio home-section py-50 py-md-80">
+  <div class="container">
+    <div class="text-center mb-50">
+      <div class="col-md-6 mx-auto">
+        <h2 class="title-page">Built With Soccer API</h2>
+        <p>
+          Projects using Soccer API under the hood!
+        </p>
+      </div>
+    </div>
+    <div class="row g-5">
+      <div *ngFor="let article of articles" class="col-md-6 col-lg-4">
+        <mat-card class="p-0 m-0">
+          <img mat-card-image src="{{ article.image }}" />
+          <mat-card-content>
+            <div class="title-head mt-20">
+              <h4>
+                <strong
+                  >{{ article.title }}<a href=""></a></strong
+                >
+              </h4>
+            </div>
+            <p>
+              {{ article.desc }}
+            </p>
+            <mat-divider></mat-divider>
+            <div class="mt-15">
+              
+              <a href="{{ article.link }}" mat-icon-button>
+                <mat-icon class="text-muted">link</mat-icon>
+              </a>
+              <!--
+              <span fxFlex></span>
+              <a nfIf="article.link" href="{{ article.code }}" mat-icon-button>
+                <mat-icon class="text-muted">code</mat-icon>
+              </a>
+              -->
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>

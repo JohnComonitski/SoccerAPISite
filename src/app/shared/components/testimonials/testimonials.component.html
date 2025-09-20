@@ -1,0 +1,38 @@
+<section
+  id="testimonial-slider"
+  class="testimonials-section py-50 py-md-80 bg-primary"
+>
+  <div class="container">
+    <div fxLayout="column" class="text-center mb-50">
+      <div class="col-lg-7 mx-auto">
+        <h2 class="title-page text-white">What our customers say</h2>
+        <p class="text-white">
+          Consectetur adipisicing elit. Velit id error rem qui. Neque aperiam
+          saepe placeat vero reprehenderit.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4" *ngFor="let testimonial of testimonials">
+        <mat-card class="bg-white h-100">
+          <mat-card-content>
+            <p>{{ testimonial.quote }}</p>
+            <div class="d-flex align-items-center mt-4">
+              <img
+                [src]="testimonial.image"
+                class="rounded-circle me-15"
+                width="50"
+                [alt]="testimonial.name"
+              />
+              <div>
+                <h6 class="mb-0">{{ testimonial.name }}</h6>
+                <small class="text-muted">{{ testimonial.role }}</small>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>

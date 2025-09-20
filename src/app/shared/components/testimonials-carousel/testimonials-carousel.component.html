@@ -1,0 +1,63 @@
+<section
+  id="testimonial-slider"
+  class="testimonials-section py-50 py-md-80 bg-primary"
+>
+  <div class="container">
+    <div fxLayout="column" class="text-center mb-50 white-color">
+      <div class="col-lg-7 mx-auto">
+        <h2 class="title-page text-white">What our customers say</h2>
+        <p class="lead w-60 text-white">
+          Consectetur adipisicing elit. Velit id error rem qui. Neque aperiam
+          saepe placeat vero reprehenderit.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-6 mx-auto position-relative">
+      <div class="carousel-wrapper">
+        <div
+          class="carousel-track"
+          [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+        >
+          <div *ngFor="let tm of testimonials" class="carousel-item">
+            <mat-card class="p-15 bg-white">
+              <mat-card-content class="text-center">
+                <div class="user-content">
+                  <div class="testimonial-img">
+                    <img
+                      width="100"
+                      height="100"
+                      class="rounded-circle"
+                      [src]="tm.photo"
+                      alt="User image"
+                    />
+                  </div>
+                  <p class="text">{{ tm.text }}</p>
+                  <div class="user-title fw-semibold">{{ tm.title }}</div>
+                  <div class="user-subtitle text-muted fs-14">
+                    {{ tm.subtitle }}
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+
+        <button
+          mat-fab
+          class="carousel-nav prev carousel-left"
+          (click)="prevSlide()"
+        >
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <button
+          mat-fab
+          class="carousel-nav next carousel-right"
+          (click)="nextSlide()"
+        >
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
